@@ -15,4 +15,15 @@ void main() {
     expect(ids, [1, 2, 3, 4, 5]);
     }
   );
+
+  test('Fetch item return item model',() async {
+    final newApi = NewsApiProvider();
+    newApi.client = MockClient((request) async {
+      final data = {"id": 123};
+      return Response(json.encode(data), 200);
+    });
+    final item = await newApi.fetchItem(123);
+    expect(item.id, 123);
+    }
+  );
 }
