@@ -4,6 +4,7 @@ import 'new_api_provider.dart';
 import 'package:lesson21/src/model/model.dart';
 
 class Respository {
+  
   List<Source> sources = <Source> [
     newsDbProvider,
     NewsApiProvider(),
@@ -13,7 +14,7 @@ class Respository {
     newsDbProvider
   ];
 
-  fetchTopIds() {
+  Future<List<int>> fetchTopIds() {
     return null;
   }
   

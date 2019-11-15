@@ -13,6 +13,10 @@ class NewsDbProvider implements Source, Cache{
     return null;
   }
 
+  NewsDbProvider() {
+    init();
+  }
+
   Database db;
   void init() async {
     /* Reference to directory or fileSystem on mobile devices*/
