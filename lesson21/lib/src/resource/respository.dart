@@ -14,8 +14,11 @@ class Respository {
     newsDbProvider
   ];
 
+
+  /* Iterate over sources when dbprovider
+     get FetchTopIds implemented */
   Future<List<int>> fetchTopIds() {
-    return null;
+    return sources[1].fetchTopIds();
   }
   
   Future<ItemModel> fetchItem(int id) async {
