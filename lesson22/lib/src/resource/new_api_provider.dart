@@ -13,10 +13,10 @@ class NewsApiProvider implements Source{
     /* Decode Json Data to default Type */
     final id = await json.decode(response.body);
     /* Default Decode Type Is List Dynamic, And Below Convert That Type To List Int */
-    List<int> toListInt = List<int>.from(id);
+    // List<int> toListInt = List<int>.from(id);
     /* Convert List Int To Future List Int To Fit With Function Type*/
-    Future<List<int>> listInt = new Future<List<int>>(() => toListInt );
-    return listInt;
+    // Future<List<int>> listInt = new Future<List<int>>(() => toListInt );
+    return id;
   }
   Future<ItemModel> fetchItem(int id) async {
     final response = await client.get('$_root/item/$id.json');
